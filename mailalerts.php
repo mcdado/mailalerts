@@ -281,7 +281,7 @@ class MailAlerts extends Module
 		Product::addCustomizationPrice($products, $customized_datas);
 		foreach ($products as $key => $product)
 		{
-			$unit_price = Product::getTaxCalculationMethod($customer->id) == PS_TAX_EXC ? $product['product_price'] : $product['product_price_wt'];
+			$unit_price = Product::getTaxCalculationMethod($customer->id) == PS_TAX_EXC ? $product['unit_price_tax_excl'] : $product['unit_price_tax_incl'];
 
 			$customization_text = '';
 			if (isset($customized_datas[$product['product_id']][$product['product_attribute_id']]))
