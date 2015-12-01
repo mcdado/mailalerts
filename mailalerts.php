@@ -325,7 +325,7 @@ class MailAlerts extends Module
 			$items_table .=
 				'<tr style="background-color:#EBECEE;">
 						<td colspan="4" style="padding:0.6em 0.4em; text-align:right;">'.$this->l('Voucher code:').' '.$discount['name'].'</td>
-					<td style="padding:0.6em 0.4em; text-align:right;">-'.Tools::displayPrice($discount['value'], $currency, false).'</td>
+					<td style="padding:0.6em 0.4em; text-align:right;">'.Tools::displayPrice(0 - $discount['value'], $currency, false).'</td>
 			</tr>';
 		}
 		if ($delivery->id_state)
